@@ -1,0 +1,24 @@
+title: Infos Digit
+email: contact@infos-digit.com
+description: L'actualité technologique et digitale.
+baseurl: "/Infos-Digit" # Important pour GitHub Pages
+url: "https://bastaps.github.io"
+
+# Réseaux Sociaux
+facebook_username: infosdigit
+x_username: infosdigit
+instagram_username: infosdigit
+youtube_channel: UC... 
+
+# Paramètres Jekyll
+markdown: kramdown
+theme: minima # On va le personnaliser, mais on garde une base simple
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections (pour ton dossier presse)
+collections:
+  presse:
+    output: true
+    permalink: /presse/:path/

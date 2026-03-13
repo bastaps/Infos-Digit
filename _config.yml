@@ -1,24 +1,30 @@
+# Informations Générales
 title: Infos Digit
 email: contact@infos-digit.com
-description: L'actualité technologique et digitale.
-baseurl: "/Infos-Digit" # Important pour GitHub Pages
+description: L'actualité technologique et digitale en Algérie.
+baseurl: "/Infos-Digit" # Garde bien ça pour que les liens marchent sur GitHub
 url: "https://bastaps.github.io"
 
-# Réseaux Sociaux
+# Liens Réseaux Sociaux (ceux que tu as demandés)
 facebook_username: infosdigit
 x_username: infosdigit
 instagram_username: infosdigit
-youtube_channel: UC... 
+youtube_channel: infosdigit
 
-# Paramètres Jekyll
-markdown: kramdown
-theme: minima # On va le personnaliser, mais on garde une base simple
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Collections (pour ton dossier presse)
+# CONFIGURATION DU DOSSIER PRESSE (Très important)
 collections:
   presse:
     output: true
     permalink: /presse/:path/
+
+# Paramètres par défaut pour les articles
+defaults:
+  - scope:
+      path: ""
+      type: "presse"
+    values:
+      layout: "article"
+
+# Moteur de texte
+markdown: kramdown
+highlighter: rouge

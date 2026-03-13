@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{{ "/" | relative_url }}">INFOS<span>DIGIT</span></a>
+            </div>
+            <ul class="menu">
+                <li><a href="{{ "/" | relative_url }}">Accueil</a></li>
+                <li><a href="{{ "/presse" | relative_url }}">Presse</a></li>
+                <li><input type="text" id="search-input" placeholder="Rechercher..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }} - Mis à jour le : {{ "now" | date: "%d/%m/%Y %H:%M" }}</p>
+        <div class="social-links">
+            <a href="https://facebook.com/{{ site.facebook_username }}"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/{{ site.x_username }}"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/{{ site.youtube_channel }}"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
